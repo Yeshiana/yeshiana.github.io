@@ -1,13 +1,13 @@
-title: John Doe # your name (or website title) here
-logo: "/images/logo.png?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+title: Yeshiana
+logo: "/images/logo.png?raw=true" # Ganti dengan nama file foto Anda jika ada (contoh: "/images/foto-yeshiana.jpg?raw=true")
+description: > 
+  Lulusan S1 Informatika (IPK 3,72) yang berfokus pada Quality Assurance. Terbiasa menyusun test case, menjalankan pengujian fungsional (manual & automation), dan menulis bug report yang jelas.
   <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="https://www.linkedin.com/in/yeshiana-qa">View My LinkedIn Profile</a> 
+  <br>
+  <a href="mailto:yeshiana09@gmail.com">Email Me</a>
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
+google_analytics: # Biarkan kosong jika belum punya ID Google Analytics
