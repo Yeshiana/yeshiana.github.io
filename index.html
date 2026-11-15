@@ -63,15 +63,17 @@ section p{max-width:40em;margin:0 0 14px}
 .proj .btn{padding:8px 16px;font-size:.95rem;margin-bottom:0}
 
 .chip{display:inline-block;vertical-align:middle;margin-left:8px;padding:2px 12px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font:600 .8rem var(--body)}
-.shots{margin-top:14px}
-.shots summary{list-style:none;cursor:pointer;margin:0}
-.shots summary::-webkit-details-marker{display:none}
-.shots summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.shots[open] summary{background:var(--ink);color:#fff}
-.shots-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
-.shots figure{margin:0}
-.shots img{display:block;width:100%;height:auto;border:2px solid var(--ink);border-radius:8px;background:var(--line)}
-.shots figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.actions .btn{margin:0}
+button.btn{font:600 .95rem var(--body);background:transparent;cursor:pointer;line-height:1.6}
+button.btn[aria-expanded="true"]{background:var(--ink);color:#fff}
+button.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.shots-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.shots-grid[hidden]{display:none}
+.shots-grid figure{margin:0}
+.shots-grid img{display:block;width:100%;height:auto;border:2px solid var(--ink);border-radius:8px;background:var(--line)}
+.shots-grid figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
+@media (max-width:520px){.shots-grid{grid-template-columns:1fr}}
 ul.plain{list-style:none;padding:0;margin:14px 0 0}
 ul.plain li{margin-bottom:6px}
 footer{padding:26px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
@@ -127,12 +129,11 @@ footer{padding:26px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
           <h3>Sistem Perpustakaan Digital SMKN 1 Bojongpicung <span class="chip">Proyek skripsi</span></h3>
           <p class="stack">Laravel 12, PHP 8.2, MySQL, Tailwind CSS, Alpine.js, Vite</p>
           <p>Website yang menggantikan pencatatan manual di perpustakaan sekolah. Ada empat peran pengguna (siswa, guru, petugas, kepala perpustakaan) dengan fitur booking dan peminjaman buku, pengembalian dengan pengecekan kondisi, sanksi, notifikasi email, dan laporan periodik dalam bentuk PDF. Sudah diuji secara manual dan otomatis dengan PHPUnit.</p>
-          <a class="btn primary" href="https://github.com/Yeshiana/sistem-perpustakaan-laravel">Kode di GitHub</a>
-          
-          <details class="shots">
-            <summary class="btn ghost">Lihat tampilan aplikasi</summary>
-            <div class="shots-grid"><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/beranda.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/beranda.png" alt="Tampilan beranda sistem perpustakaan"></a><figcaption>Beranda</figcaption></figure><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-siswa.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-siswa.png" alt="Tampilan dashboard siswa sistem perpustakaan"></a><figcaption>Dashboard siswa</figcaption></figure><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-petugas.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-petugas.png" alt="Tampilan dashboard petugas sistem perpustakaan"></a><figcaption>Dashboard petugas</figcaption></figure><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-kepala.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-kepala.png" alt="Tampilan dashboard kepala perpustakaan sistem perpustakaan"></a><figcaption>Dashboard kepala perpustakaan</figcaption></figure></div>
-          </details>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/Yeshiana/sistem-perpustakaan-laravel">Kode di GitHub</a>
+            <button type="button" class="btn ghost" aria-expanded="false" aria-controls="shots-perpus">Lihat tampilan aplikasi</button>
+          </div>
+          <div class="shots-grid" id="shots-perpus" hidden><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/beranda.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/beranda.png" alt="Tampilan beranda sistem perpustakaan"></a><figcaption>Beranda</figcaption></figure><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-siswa.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-siswa.png" alt="Tampilan dashboard siswa sistem perpustakaan"></a><figcaption>Dashboard siswa</figcaption></figure><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-petugas.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-petugas.png" alt="Tampilan dashboard petugas sistem perpustakaan"></a><figcaption>Dashboard petugas</figcaption></figure><figure><a href="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-kepala.png" target="_blank" rel="noopener"><img loading="lazy" src="https://raw.githubusercontent.com/Yeshiana/sistem-perpustakaan-laravel/main/docs/screenshots/dashboard-kepala.png" alt="Tampilan dashboard kepala perpustakaan sistem perpustakaan"></a><figcaption>Dashboard kepala perpustakaan</figcaption></figure></div>
         </div>
       </article>
       <article class="proj">
@@ -202,5 +203,15 @@ footer{padding:26px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
   <div class="wrap">© 2026 Yeshiana</div>
 </footer>
 
+<script>
+document.querySelectorAll('button[aria-controls]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=document.getElementById(b.getAttribute('aria-controls'));
+    var open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));
+    t.hidden=open;
+  });
+});
+</script>
 </body>
 </html>
