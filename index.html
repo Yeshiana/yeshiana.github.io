@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yeshiana | Quality Assurance</title>
+<meta name="description" content="Portofolio Yeshiana, lulusan S1 Informatika yang berfokus pada Quality Assurance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F1; --panel:#FFFFFF; --ink:#14213D; --muted:#4B5A6B;
+  --line:#CBD5D3; --accent:#0E7C7B; --pass:#1B7F4B; --pass-bg:#DDF2E6;
+  --bug:#C2410C;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.top{padding:20px 0;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font:800 20px var(--head);text-decoration:none;color:var(--ink)}
+nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-weight:600}
+nav a:hover{color:var(--accent)}
+
+.hero{padding:64px 0 48px}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+h1{font:800 clamp(2.6rem,7vw,4.6rem)/1 var(--head);margin:0 0 20px;letter-spacing:-.02em}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+
+.report{background:var(--panel);border:2px solid var(--ink);border-radius:10px;overflow:hidden}
+.report .photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-bottom:2px solid var(--ink);background:var(--line)}
+.report ul{list-style:none;margin:0;padding:8px 18px 14px}
+.report li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+.report li:last-child{border-bottom:0}
+.ok{color:var(--pass);font-weight:600;white-space:nowrap}
+
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font:800 1.9rem/1.2 var(--head);margin:0 0 24px}
+.about p{max-width:40em;margin:0 0 14px}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.skills div{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px}
+.skills h3{font:600 1.05rem var(--head);margin:0 0 8px}
+.skills p{margin:0;color:var(--muted);font-size:.98rem}
+
+.case{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--pass);border-radius:8px;padding:22px 24px;margin-bottom:18px}
+.case header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.case h3{font:800 1.3rem var(--head);margin:0}
+.chip{background:var(--pass-bg);color:var(--pass);font-weight:600;font-size:.85rem;padding:3px 12px;border-radius:99px}
+.meta{color:var(--muted);font-size:.95rem;margin:0 0 10px}
+.case p{margin:0 0 10px;max-width:42em}
+.case dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0 0 10px;font-size:.98rem}
+.case dt{color:var(--muted)}
+.case dd{margin:0}
+.bug{border-left-color:var(--bug)}
+.bug .chip{background:#FDE6DA;color:var(--bug)}
+
+.contact p{max-width:36em}
+.contact ul{list-style:none;padding:0;margin:16px 0 0}
+.contact li{margin-bottom:6px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .hero{padding-top:40px}
+  nav a{margin:0 16px 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Yeshiana</a>
+    <nav aria-label="Menu utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#skill">Skill</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Memastikan aplikasi bekerja sebelum sampai ke pengguna.</h1>
+        <p class="lead">Saya Yeshiana, lulusan S1 Informatika yang berfokus pada Quality Assurance. Saya menyusun test case, menguji fungsi aplikasi, dan menulis bug report yang mudah direproduksi.</p>
+        <div class="btns">
+          <a class="btn primary" href="#proyek">Lihat proyek</a>
+          <a class="btn ghost" href="mailto:yeshiana09@gmail.com">Kirim email</a>
+        </div>
+      </div>
+      <div class="report" aria-label="Ringkasan profil">
+        <img class="photo" src="images/foto_diri.jpeg" alt="Foto Yeshiana">
+        <ul>
+          <li><span>IPK S1 Informatika</span><span class="ok">3,72</span></li>
+          <li><span>Pengujian manual</span><span class="ok">Lulus</span></li>
+          <li><span>Pengujian automation</span><span class="ok">Lulus</span></li>
+          <li><span>Bug report</span><span class="ok">Jelas</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="tentang" class="about">
+    <div class="wrap">
+      <h2>Tentang saya</h2>
+      <p>Saya lulus dari S1 Informatika dengan IPK 3,72. Di bidang QA, saya terbiasa membaca kebutuhan, menurunkannya menjadi test case, lalu menjalankan pengujian fungsional secara manual dan dengan automation.</p>
+      <p>[Tambahkan 1-2 kalimat: kenapa kamu memilih QA, dan posisi apa yang sedang kamu cari.]</p>
+    </div>
+  </section>
+
+  <section id="skill">
+    <div class="wrap">
+      <h2>Skill dan tools</h2>
+      <div class="skills">
+        <div><h3>Pengujian</h3><p>Functional testing, regression testing, penyusunan test case, bug reporting</p></div>
+        <div><h3>Automation</h3><p>[isi: Selenium / Cypress / Katalon]</p></div>
+        <div><h3>API testing</h3><p>[isi: Postman]</p></div>
+        <div><h3>Manajemen</h3><p>[isi: Jira / Trello / TestRail]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyek">
+    <div class="wrap">
+      <h2>Proyek</h2>
+
+      <article class="case">
+        <header>
+          <h3>[Nama proyek pertama]</h3>
+          <span class="chip">Selesai</span>
+        </header>
+        <p class="meta">[Skripsi / Magang / Proyek mandiri] • [Tahun]</p>
+        <p>[Aplikasi apa yang diuji dan apa tujuan pengujiannya.]</p>
+        <dl>
+          <dt>Peran</dt><dd>QA Tester</dd>
+          <dt>Tools</dt><dd>[isi]</dd>
+          <dt>Hasil</dt><dd>[contoh: 45 test case dibuat, 12 bug ditemukan]</dd>
+        </dl>
+        <a href="pdf/nama-file.pdf">Lihat dokumen test case</a>
+      </article>
+
+      <article class="case bug">
+        <header>
+          <h3>[Nama proyek kedua]</h3>
+          <span class="chip">Sedang berjalan</span>
+        </header>
+        <p class="meta">[Jenis proyek] • [Tahun]</p>
+        <p>[Deskripsi singkat proyek.]</p>
+        <dl>
+          <dt>Peran</dt><dd>[isi]</dd>
+          <dt>Tools</dt><dd>[isi]</dd>
+          <dt>Hasil</dt><dd>[isi]</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact">
+    <div class="wrap">
+      <h2>Kontak</h2>
+      <p>Tertarik bekerja sama atau ingin melihat dokumen pengujian saya? Hubungi saya lewat:</p>
+      <ul>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/yeshiana-qa">yeshiana-qa</a></li>
+        <li>Email: <a href="mailto:yeshiana09@gmail.com">yeshiana09@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Yeshiana">Yeshiana</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Yeshiana</div>
+</footer>
+
+</body>
+</html>
