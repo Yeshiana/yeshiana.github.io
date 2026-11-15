@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yeshiana | Web Developer</title>
+<meta name="description" content="Portofolio Yeshiana, lulusan S1 Informatika yang berfokus pada pengembangan website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F2FA; --panel:#FFFFFF; --ink:#1B1B3A; --muted:#55557A;
+  --line:#D4D6EA; --accent:#4338CA; --accent-soft:#E4E3FB;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 var(--body)}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+.top{padding:18px 0;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font:800 20px var(--head);text-decoration:none;color:var(--ink)}
+nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-weight:600}
+nav a:hover{color:var(--accent)}
+
+.hero{padding:60px 0 48px}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+h1{font:800 clamp(2.4rem,6.5vw,4.4rem)/1.02 var(--head);margin:0 0 20px;letter-spacing:-.025em}
+.lead{font-size:1.2rem;color:var(--muted);max-width:33em;margin:0 0 28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ink);margin:0 10px 10px 0}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+
+/* browser window frame around the photo */
+.browser{background:var(--panel);border:2px solid var(--ink);border-radius:10px;overflow:hidden}
+.bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--accent-soft);border-bottom:2px solid var(--ink)}
+.dot{width:11px;height:11px;border-radius:50%;border:2px solid var(--ink);background:var(--panel)}
+.url{flex:1;margin-left:8px;padding:2px 12px;background:var(--panel);border:1.5px solid var(--ink);border-radius:99px;font-size:.85rem;color:var(--muted);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.browser img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--line)}
+
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font:800 1.9rem/1.2 var(--head);margin:0 0 24px}
+section p{max-width:40em;margin:0 0 14px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px}
+.card h3{font:600 1.05rem var(--head);margin:0 0 8px}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+
+.proj{background:var(--panel);border:2px solid var(--ink);border-radius:10px;margin-bottom:22px;overflow:hidden}
+.proj .bar{padding:8px 14px}
+.proj .body{padding:20px 24px}
+.proj h3{font:800 1.35rem var(--head);margin:0 0 4px}
+.stack{color:var(--muted);font-size:.95rem;margin:0 0 10px}
+.proj p{margin:0 0 14px;max-width:42em}
+.proj .btn{padding:8px 16px;font-size:.95rem;margin-bottom:0}
+
+ul.plain{list-style:none;padding:0;margin:14px 0 0}
+ul.plain li{margin-bottom:6px}
+footer{padding:26px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .hero{padding-top:40px}
+  nav a{margin:0 16px 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Yeshiana</a>
+    <nav aria-label="Menu utama">
+      <a href="#proyek">Proyek</a>
+      <a href="#skill">Skill</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Saya membangun website dari nol.</h1>
+        <p class="lead">Saya Yeshiana, lulusan S1 Informatika (IPK 3,72) yang fokus pada pengembangan web. Saya sedang membuat proyek-proyek website dan mencari peluang sebagai junior programmer.</p>
+        <a class="btn primary" href="#proyek">Lihat proyek</a>
+        <a class="btn ghost" href="mailto:yeshiana09@gmail.com">Kirim email</a>
+      </div>
+      <div class="browser">
+        <div class="bar" aria-hidden="true">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="url">yeshiana.github.io</span>
+        </div>
+        <img src="images/foto_diri.jpeg" alt="Foto Yeshiana">
+      </div>
+    </div>
+  </div>
+
+  <section id="proyek">
+    <div class="wrap">
+      <h2>Proyek</h2>
+
+      <article class="proj">
+        <div class="bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">[alamat-demo-proyek]</span></div>
+        <div class="body">
+          <h3>[Nama proyek pertama]</h3>
+          <p class="stack">[HTML, CSS, JavaScript]</p>
+          <p>[Website apa ini, untuk siapa, dan masalah apa yang diselesaikan. Satu atau dua kalimat saja.]</p>
+          <a class="btn primary" href="#">Lihat demo</a>
+          <a class="btn ghost" href="#">Kode di GitHub</a>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">[alamat-demo-proyek]</span></div>
+        <div class="body">
+          <h3>[Nama proyek kedua]</h3>
+          <p class="stack">[Teknologi yang dipakai]</p>
+          <p>[Deskripsi singkat proyek.]</p>
+          <a class="btn primary" href="#">Lihat demo</a>
+          <a class="btn ghost" href="#">Kode di GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skill">
+    <div class="wrap">
+      <h2>Skill</h2>
+      <div class="grid">
+        <div class="card"><h3>Front-end</h3><p>[isi: HTML, CSS, JavaScript, React, dll.]</p></div>
+        <div class="card"><h3>Back-end</h3><p>[isi: PHP, Laravel, Node.js, Python, dll.]</p></div>
+        <div class="card"><h3>Database</h3><p>[isi: MySQL, PostgreSQL, dll.]</p></div>
+        <div class="card"><h3>Tools</h3><p>Git, GitHub, [isi tambahan]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <div class="wrap">
+      <h2>Tentang saya</h2>
+      <p>Selama kuliah di Informatika, saya paling banyak belajar dan berlatih membuat website. Sekarang saya ingin menjadikannya pekerjaan, dan saya membangun portofolio ini lewat proyek nyata satu per satu.</p>
+      <p>[Tambahkan 1-2 kalimat: jenis website yang paling kamu suka buat, atau hal yang sedang kamu pelajari sekarang.]</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="wrap">
+      <h2>Kontak</h2>
+      <p>Punya lowongan junior programmer atau ingin berdiskusi? Hubungi saya lewat:</p>
+      <ul class="plain">
+        <li>Email: <a href="mailto:yeshiana09@gmail.com">yeshiana09@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/yeshiana-qa">yeshiana-qa</a></li>
+        <li>GitHub: <a href="https://github.com/Yeshiana">github.com/Yeshiana</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Yeshiana</div>
+</footer>
+
+</body>
+</html>
